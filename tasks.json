@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "id": "A",
+      "name": "Compile Source",
+      "priority": 1,
+      "depends_on": [],
+      "duration_ms": 500
+    },
+    {
+      "id": "B",
+      "name": "Link Objects",
+      "priority": 2,
+      "depends_on": ["A"],
+      "duration_ms": 400
+    },
+    {
+      "id": "C",
+      "name": "Run Unit Tests",
+      "priority": 1,
+      "depends_on": ["A"],
+      "duration_ms": 300
+    },
+    {
+      "id": "D",
+      "name": "Package Build",
+      "priority": 3,
+      "depends_on": ["B", "C"],
+      "duration_ms": 200
+    }
+  ]
+}
